@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Dashboard</title>
+    <title>Focus Timer with Distraction Logger</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="dashboard">
-        <h1>Hacker Dashboard</h1>
-        <div class="terminal">
-            <pre id="output"></pre>
-            <input type="text" id="commandInput" placeholder="Enter command..." autofocus>
+    <div class="container">
+        <h1>Focus Timer</h1>
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
         </div>
-        <div class="controls">
-            <button onclick="executeCommand()">Execute Command</button>
-            <button onclick="clearOutput()">Clear Output</button>
-        </div>
+        <button onclick="startTimer()">Start Focus</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="resetTimer()">Reset</button>
+
+        <h2>Distraction Logger</h2>
+        <input type="text" id="distractionInput" placeholder="Log your distraction...">
+        <button onclick="logDistraction()">Log Distraction</button>
+        <ul id="distractionList"></ul>
     </div>
     <script src="script.js"></script>
 </body>
